@@ -15,7 +15,7 @@ async def user_role(message: Message, state:FSMContext):
     '''Задает вопрос выбора роли'''
     await bot.send_message(
         chat_id=message.chat.id,
-        text="Здравствуйте, Вы родитель или ребенок?",
+        text="Здравствуйте, вы родитель или ребенок?",
         reply_markup=keyboard_maker()
     )
     await state.set_state(User.wait_role)
